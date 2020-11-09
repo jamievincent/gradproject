@@ -10,11 +10,15 @@
 
 	<!---- initialise scene ---->
 	<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam;'>
-		<!--- create a shape --->
+		
+		<!--- create a shape 
 		<a-box position='0 0.5 0' material='opacity: 0.5;'></a-box>
+		--->
 
 		<!--- marker ---->
-		<a-marker-camera preset='hiro'></a-marker-camera>
+		<a-marker-camera preset='hiro'>
+			<a-image id="test" src="howtoo.png" position="0 0 0" rotation="-90 0 0" width="" height="" opacity="1" transparent="true" alpha-test="0.2" shader="standard" scale="1 1 1" visible="" material="" geometry=""></a-image>
+		</a-marker-camera>
 	</a-scene>
 </body>
 
