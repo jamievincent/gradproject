@@ -10,6 +10,12 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 
 <script>
+	window.addEventListener('click', function () {
+      var v = document.querySelector('#vid');
+      v.play();
+      });
+
+
 	AFRAME.registerComponent('vidhandler', {
 	  // ...
 	  init: function () {
@@ -42,11 +48,12 @@
 
     <a-scene embedded artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180' >
     <a-assets>
-      <video id="vid" src="https://www.youtube.com/watch?v=k85mRPqvMbE&ab_channel=CrazyFrog" loop="true" crossorigin>
+      <video id="vid" src="https://cdn.glitch.com/b62367d1-ceab-454b-b664-b032f995ed86%2FBig_Buck_Bunny_Trailer_1080p.ogv.720p.webm?1532370072191" loop="true" crossorigin>
     </a-assets>
    
     <a-marker id="memarker" preset="hiro" vidhandler>
-      <a-box position='0 0 0' material='transparent:true;opacity: 0.7;src:#vid'></a-box>
+      <!---<a-box position='0 0 0' material='transparent:true;opacity: 0.7;src:#vid'></a-box> -->
+      <a-video src="#vid" position="0 0.5 0" rotation="270 0 0" play="true"></a-video>
     </a-marker>
   <a-camera-static></a-camera-static>
   </a-scene>
