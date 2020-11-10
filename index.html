@@ -3,9 +3,10 @@
 
 <!---- import libraries ---->
 
-<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
-<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.6.0/aframe/build/aframe-ar.js"></script>
+<script src="https://aframe.io/releases/0.6.0/aframe.min.js"></script>
+<script src="https://cdn.rawgit.com/jeromeetienne/AR.js/1.5.0/aframe/build/aframe-ar.js"></script>
 <script src="//cdn.rawgit.com/donmccurdy/aframe-extras/v3.8.4/dist/aframe-extras.min.js"></script>
+<script src="https://rawgit.com/mayognaise/aframe-gif-shader/master/dist/aframe-gif-shader.min.js"></script>
 
 <script>
 	AFRAME.registerComponent('vidhandler', {
@@ -34,7 +35,7 @@
 <body style='margin : 0px; overflow: hidden;'>
 
 	<!---- initialise scene ---->
-	<a-scene embedded arjs='debugUIEnabled: false; sourceType: webcam;'>
+ 	<a-scene embedded artoolkit='sourceType: webcam; detectionMode: mono; maxDetectionRate: 30; canvasWidth: 240; canvasHeight: 180' >
 
 		<a-assets>
 			<video id="vid" src="https://www.youtube.com/watch?v=k85mRPqvMbE&ab_channel=CrazyFrog" loop="true" crossorigin>
