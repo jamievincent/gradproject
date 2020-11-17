@@ -43,6 +43,7 @@
 		v.play();
 	});
 </script>
+
 </head>
 
 <body style='margin : 0px; overflow: hidden;'>
@@ -51,14 +52,17 @@
     <a-assets>
       <video id="vid" src="small.mp4" loop="true" webkit-playsinline playsinline controls autoplay>
     </a-assets>
-   
-    <a-marker id="memarker" preset="hiro" vidhandler>
+
+    <a-marker-camera type='pattern' url='path/to/pattern-marker.patt' vidhandler>
       <a-video position='0 0 0' rotation="90 180 0" play-on-window-click play="true" material='transparent:true;opacity: 0.7;src:#vid'></a-video>
-    </a-marker>
+    </a-marker-camera>
+
   	<a-camera-static></a-camera-static>
   </a-scene>
 </body>
 
 </html>
 
-<!---- <a-image id="test" src="howtoo.png" position="0 0 0" rotation="-90 0 0" width="" height="" opacity="1" transparent="true" alpha-test="0.2" shader="standard" scale="1 1 1" visible="" material="" geometry=""></a-image> --->
+<!---- <a-image id="test" src="howtoo.png" position="0 0 0" rotation="-90 0 0" width="" height="" opacity="1" transparent="true" alpha-test="0.2" shader="standard" scale="1 1 1" visible="" material="" geometry=""></a-image> 
+
+	<a-marker id="memarker" preset="hiro" vidhandler> --->
